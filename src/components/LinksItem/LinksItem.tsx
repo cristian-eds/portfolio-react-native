@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 import { styles } from './LinksItemStyles';
-import { styles as globalStyles} from '../../styles/GlobalStyles'
+import { styles as globalStyles} from '../../styles/GlobalStyles';
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 

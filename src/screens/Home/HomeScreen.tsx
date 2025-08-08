@@ -2,16 +2,14 @@ import React from 'react';
 import { Image, Text, View } from 'react-native';
 
 import { styles } from './HomeScreenStyles';
-import { styles as globalStyles} from '../../styles/GlobalStyles'
-
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { styles as globalStyles} from '../../styles/GlobalStyles';
 
 import imagePerfil from '../../../assets/img_perfil.jpeg';
 import { LinksItem } from '../../components/LinksItem/LinksItem';
 
 export function HomeScreen() {
   return (
-    <View style={styles.containerHome}>
+    <View style={globalStyles.containerMain}>
         <View style={styles.containerImage}>
             <Image source={imagePerfil} style={styles.imgPerfil}/>
         </View>
@@ -20,7 +18,7 @@ export function HomeScreen() {
             <Text style={globalStyles.subtitle}>Developer Full Stack Web - Mobile</Text>
         </View>
         <View style={styles.containerLinks}>
-            <Text style={[globalStyles.caption, {paddingLeft: 12}]}>
+            <Text style={globalStyles.caption}>
               Links
             </Text>
             <LinksItem typeLink='GitHub' usernameLink='cristian-eds' iconName='github'/>

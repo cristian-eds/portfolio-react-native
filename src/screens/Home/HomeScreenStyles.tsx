@@ -1,12 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  containerHome: {
-    flex: 1,
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    backgroundColor: '#c6d0dbff'
-  },
   containerImage: {
     height: 180,
     width: 180,
@@ -34,5 +28,6 @@ export const styles = StyleSheet.create({
     marginVertical: 15,
     paddingTop:20
   },
+  
 
 });

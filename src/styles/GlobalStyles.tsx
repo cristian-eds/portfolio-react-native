@@ -1,10 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  containerMain: {
+    flex: 1,
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    backgroundColor: '#c6d0dbff'
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    textAlign: 'center'
   },
   subtitle: {
     fontSize: 20,
@@ -12,9 +17,11 @@ export const styles = StyleSheet.create({
   },
   caption: {
     fontSize: 18,
-    textAlign: 'left'
+    textAlign: 'left',
+    fontStyle: 'italic',
+    paddingLeft: 12
   },
   text: {
-    fontSize: 16
+    fontSize: 16,
   }
 });
