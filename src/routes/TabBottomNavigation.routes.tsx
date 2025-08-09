@@ -10,17 +10,23 @@ const Tab = createBottomTabNavigator();
 
 const TabBottomNavigation = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator 
+        initialRouteName="home" 
+        screenOptions={{
+            tabBarActiveTintColor: 'black',
+            tabBarLabelStyle: {
+                fontSize:12
+            }
+            
+        }}
+        >
             <Tab.Screen
                 name="projects"
                 component={ProjectsScreen}
                 options={{
                     title: 'Projects',
                     tabBarLabel: 'Projects',
-                    tabBarLabelStyle: {
-                        color: 'black'
-                    },
-                    tabBarIcon: () => <MaterialCommunityIcons name="view-dashboard" size={24} color="black" />
+                    tabBarIcon: ({color, focused}) => <MaterialCommunityIcons name="view-dashboard" size={focused ? 26: 18} color={color} />
                 }}
             />
             <Tab.Screen
@@ -29,10 +35,7 @@ const TabBottomNavigation = () => {
                 options={{
                     title: 'Home',
                     tabBarLabel: 'Home',
-                    tabBarLabelStyle: {
-                        color: 'black'
-                    },
-                    tabBarIcon: () => <MaterialCommunityIcons name="home" size={24} color="black" />
+                    tabBarIcon: ({color, focused}) => <MaterialCommunityIcons name="home" size={focused ? 26: 18} color={color} />
                 }}
             />
             <Tab.Screen
@@ -41,10 +44,7 @@ const TabBottomNavigation = () => {
                 options={{
                     title: 'Skills',
                     tabBarLabel: 'Skills',
-                    tabBarLabelStyle: {
-                        color: 'black'
-                    },
-                    tabBarIcon: () => <MaterialCommunityIcons name="tools" size={24} color="black" />
+                    tabBarIcon: ({color,focused}) => <MaterialCommunityIcons name="tools" size={focused ? 26: 18} color={color} />
                 }}
             />
 

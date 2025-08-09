@@ -27,7 +27,7 @@ export const projects: Project[]  = [
         description: 'Development an App for reservations of roast meats with React Native.',
         urlLink: 'private',
         icons: [
-        <MaterialCommunityIcons name="react" size={24} color="black" key={"react"}/>, 
+        <MaterialCommunityIcons name="react" size={24} color="black" key={"react-native"}/>, 
         <MaterialCommunityIcons name="firebase" size={24} color="black" key={"firebase"}/>]
     }
 ]
