@@ -1,10 +1,12 @@
 import React, { ReactNode } from 'react';
-import { Text, View } from 'react-native';
+import { Linking, Pressable, Text, View } from 'react-native';
 
 import { styles } from './CardProjectStyles';
 import { styles as globalStyles } from '../../styles/GlobalStyles';
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { PrefixUrl } from '../../utils/URLPrefix';
+import handleLinkToUrl from '../../services/openUrlLinkService';
 
 interface CardProjectProps {
     title: string,
@@ -14,6 +16,11 @@ interface CardProjectProps {
 }
 
 export function CardProject(props: CardProjectProps) {
+
+    const handlePressToLink = () => {
+        if(props.urlLink !== 'private') handleLinkToUrl(props.urlLink, PrefixUrl.DEFAULT);
+    }
+
     return (
         <View style={styles.containerCard}>
             <View style={styles.cardHeader}>
@@ -23,9 +30,9 @@ export function CardProject(props: CardProjectProps) {
                 </View>
             </View>
             <Text>{props.description}</Text>
-            <View style={styles.cardHeader}>
+            <Pressable style={styles.cardHeader} onPress={handlePressToLink}>
                 <Text><MaterialCommunityIcons name="link-variant" size={20} color="black" /> {props.urlLink}</Text>
-            </View>
+            </Pressable>
         </View>
     );
 }

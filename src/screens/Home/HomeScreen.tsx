@@ -21,9 +21,9 @@ export function HomeScreen() {
             <Text style={globalStyles.caption}>
               Links
             </Text>
-            <LinksItem typeLink='GitHub' usernameLink='cristian-eds' iconName='github'/>
-            <LinksItem typeLink='Linkedin' usernameLink='cristian-edss' iconName='linkedin'/>
-            <LinksItem typeLink='E-mail' usernameLink='cristian.santos0308@gmail.com' iconName='email'/>
+            <LinksItem typeLink='GITHUB' usernameLink='cristian-eds' iconName='github'/>
+            <LinksItem typeLink='LINKEDIN' usernameLink='cristian-edss' iconName='linkedin'/>
+            <LinksItem typeLink='EMAIL' usernameLink='cristian.santos0308@gmail.com' iconName='email'/>
         </View>
     </View>
   );
